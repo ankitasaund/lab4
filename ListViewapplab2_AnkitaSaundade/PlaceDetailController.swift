@@ -34,6 +34,18 @@ class PlaceDetailController: UIViewController {
         self.PlaceImage.image = self.plcDetail.iPlaceImage
         navigationItem.title = self.LablePlacename.text
         
+        //add fly-in animation for Image
+        var rotationTransform : CATransform3D = CATransform3DIdentity
+        rotationTransform = CATransform3DTranslate(rotationTransform, -250, -250, 0)
+        PlaceImage?.layer.transform = rotationTransform
+        UIView.animate(withDuration: 6, animations: {
+            self.PlaceImage?.layer.transform = CATransform3DIdentity
+        })
+
+        //add fade in animation for text
+        Placedetail.alpha = 0
+        UIView.animate(withDuration: 10, animations: {self.Placedetail.alpha = 1})
+        
         
     }
    

@@ -59,6 +59,13 @@ class PlacesTableViewController: UITableViewController, UISearchResultsUpdating
         self.searchController.dimsBackgroundDuringPresentation = false
         self.tableView.tableHeaderView = self.searchController.searchBar
     }
+    
+        //reload data otherwise even though the data is added it wont show on the table
+        override func viewDidAppear(_ animated: Bool)
+        {
+            self.tableView.reloadData()
+        }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -107,9 +114,6 @@ class PlacesTableViewController: UITableViewController, UISearchResultsUpdating
         cell.cellImage?.layer.cornerRadius = cell.cellImage.frame.size.width/2.0
         cell.cellImage?.clipsToBounds = true
         cell.cellImage?.layer.masksToBounds = true
-   //  cell.cellImage?.image = myPlaces[indexPath.row].iPlaceImage
-       // cell.cellPlaceDetail?.text = myPlaces[indexPath.row].iPlaceDetail
-        
         cell.cellImage?.image = cellItem.iPlaceImage
          cell.cellPlaceDetail?.text = cellItem.iPlaceDetail
         
@@ -122,7 +126,7 @@ class PlacesTableViewController: UITableViewController, UISearchResultsUpdating
         var rotationTransform : CATransform3D = CATransform3DIdentity
         rotationTransform = CATransform3DTranslate(rotationTransform, -250, -250, 0)
         cell.cellImage?.layer.transform = rotationTransform
-        UIView.animate(withDuration: 10, animations: {
+        UIView.animate(withDuration: 6, animations: {
             cell.cellImage?.layer.transform = CATransform3DIdentity
         })
         // Configure the cell...
@@ -200,25 +204,28 @@ class PlacesTableViewController: UITableViewController, UISearchResultsUpdating
  // Get the new view controller using segue.destinationViewController.
  // Pass the selected object to the new view controller.
  if segue.identifier == "ShowPlaceDetail"
- {
- if let indexPath = self.tableView.indexPathForSelectedRow
- {
- let detailVC = segue.destination as! PlaceDetailController
- /*detailVC.LablePlaceNametext = Places[indexPath.row]
- // detailVC.LableDateText = Date[indexPath.row]
- detailVC.PlaceImages = PlaceImage[indexPath.row]
- detailVC.LablePlaceDetailtext = PlaceDetail[indexPath.row]*/
- 
-    /*detailVC.LablePlaceNametext = myPlaces[indexPath.row].iPlaceName
-    detailVC.PlaceImages = myPlaces[indexPath.row].iPlaceImage
-    detailVC.LablePlaceDetailtext = myPlaces[indexPath.row].iPlaceDetail*/
-    //detailVC.plcDetail = myPlaces[indexPath.row]
+  {
+    if let indexPath = self.tableView.indexPathForSelectedRow
+     {
+      let detailVC = segue.destination as! PlaceDetailController
     
-    detailVC.plcDetail = searchController.isActive ?
+       detailVC.plcDetail = searchController.isActive ?
         searchResults[indexPath.row] : myPlaces[indexPath.row]
     }
    }
- }
+    else if segue.identifier == "AddNewPlaces"
+     {
+        let addVC = segue.destination as! AddViewController
+        addVC.newPlaces = addData
+    
+       }
+    }
+    func addData(newItem : PlaceObject)
+        {
+            myPlaces.append(newItem)
+        }
+    
+ 
     
     func filterContentForSearchText(searchText : String)
     {
@@ -234,6 +241,6 @@ class PlacesTableViewController: UITableViewController, UISearchResultsUpdating
         filterContentForSearchText(searchText: textToSeach)
        
         tableView.reloadData()
-      }
+        }
     }
- }
+}

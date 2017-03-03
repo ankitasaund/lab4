@@ -58,11 +58,79 @@
                             <outlet property="delegate" destination="FEU-p3-6Z1" id="UG5-Jv-aSP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Places" id="XTO-5I-6VW"/>
+                    <navigationItem key="navigationItem" title="Places" id="XTO-5I-6VW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="K6P-Qh-Yy4">
+                            <connections>
+                                <segue destination="j9d-wz-sO6" kind="presentation" identifier="AddNewPlaces" id="V5b-Ei-6CH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4l-rw-dke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1792.8" y="-243.32833583208398"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="sLJ-Yu-NLc">
+            <objects>
+                <viewController id="j9d-wz-sO6" customClass="AddViewController" customModule="ListViewapplab2_AnkitaSaundade" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q3O-Da-bKl"/>
+                        <viewControllerLayoutGuide type="bottom" id="G0G-Ql-aug"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xll-Kz-UtF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the place name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Xe-yI-NrH">
+                                <rect key="frame" x="37" y="77" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image file name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHK-kW-184">
+                                <rect key="frame" x="89" y="278" width="197" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b49-hf-04L">
+                                <rect key="frame" x="50" y="350" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="clickedCancel:" destination="j9d-wz-sO6" eventType="touchUpInside" id="9hG-hn-aqt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shn-8u-aRi">
+                                <rect key="frame" x="252" y="350" width="68" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="clickedSave:" destination="j9d-wz-sO6" eventType="touchUpInside" id="dRc-Ja-GGM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add place detail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UY4-Ee-d7h">
+                                <rect key="frame" x="37" y="182" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="addPlaceDetail" destination="UY4-Ee-d7h" id="jeU-oP-xPq"/>
+                        <outlet property="addPlaceImage" destination="DHK-kW-184" id="82K-VS-mxw"/>
+                        <outlet property="addPlaceName" destination="0Xe-yI-NrH" id="YTD-Is-ppH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rB4-Ge-Yow" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306" y="-1145"/>
         </scene>
         <!--Place Detail Controller-->
         <scene sceneID="GIQ-RC-5WA">
