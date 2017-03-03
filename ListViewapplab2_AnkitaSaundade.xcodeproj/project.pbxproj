@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D5757331E69442300387DE9 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5757321E69442300387DE9 /* AddViewController.swift */; };
 		8DE9399A1E6544C900DCF4EC /* PlaceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE939991E6544C900DCF4EC /* PlaceObject.swift */; };
 		8DF721191E4BBBD500C9B212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF721181E4BBBD500C9B212 /* AppDelegate.swift */; };
 		8DF7211E1E4BBBD500C9B212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DF7211C1E4BBBD500C9B212 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D5757321E69442300387DE9 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		8DE939991E6544C900DCF4EC /* PlaceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceObject.swift; path = ListViewapplab2_AnkitaSaundade/PlaceObject.swift; sourceTree = "<group>"; };
 		8DF721151E4BBBD500C9B212 /* ListViewapplab2_AnkitaSaundade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListViewapplab2_AnkitaSaundade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF721181E4BBBD500C9B212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				8DF721181E4BBBD500C9B212 /* AppDelegate.swift */,
 				8DF7211C1E4BBBD500C9B212 /* Main.storyboard */,
+				8D5757321E69442300387DE9 /* AddViewController.swift */,
 				8DF721301E4BCE3E00C9B212 /* AboutViewController.swift */,
 				8DF7212E1E4BC33E00C9B212 /* PlaceDetailController.swift */,
 				8DF7212C1E4BC05000C9B212 /* PlacesTableViewCell.swift */,
@@ -150,6 +153,7 @@
 			files = (
 				8DE9399A1E6544C900DCF4EC /* PlaceObject.swift in Sources */,
 				8DF721191E4BBBD500C9B212 /* AppDelegate.swift in Sources */,
+				8D5757331E69442300387DE9 /* AddViewController.swift in Sources */,
 				8DF7212B1E4BBC3D00C9B212 /* PlacesTableViewController.swift in Sources */,
 				8DF7212F1E4BC33E00C9B212 /* PlaceDetailController.swift in Sources */,
 				8DF721311E4BCE3E00C9B212 /* AboutViewController.swift in Sources */,
