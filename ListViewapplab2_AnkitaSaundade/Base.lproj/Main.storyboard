@@ -110,7 +110,6 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="clickedSave:" destination="j9d-wz-sO6" eventType="touchUpInside" id="dRc-Ja-GGM"/>
-                                    <segue destination="FEU-p3-6Z1" kind="show" identifier="saveSegue" id="med-3n-gQf"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add place detail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UY4-Ee-d7h">
@@ -279,7 +278,4 @@ I worked as a web developer few years back but after I came to USA and had lot's
     <resources>
         <image name="mypic" width="256" height="256"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="med-3n-gQf"/>
-    </inferredMetricsTieBreakers>
 </document>

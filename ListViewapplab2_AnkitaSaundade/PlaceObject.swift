@@ -21,4 +21,5 @@ class PlaceObject: NSObject {
         self.iPlaceChecked = iPlaceChecked
     }
     
+    
 }
