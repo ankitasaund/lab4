@@ -25,26 +25,26 @@ class AddViewController: UIViewController {
         if (!addPlaceName.hasText) {
             self.alertError("Unable to save", msg: "Item name can't be blank.")
         }
+        else{
 
-        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+            let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
         
-        newPlaces = NSEntityDescription.insertNewObject(forEntityName: "PlaceObject", into: managedObjectContext) as! PlaceObjectMO
+            newPlaces = NSEntityDescription.insertNewObject(forEntityName: "PlaceObject", into: managedObjectContext) as! PlaceObjectMO
         
-        newPlaces.iPlaceName = addPlaceName.text
-        newPlaces.iPlaceImage = NSData(data: UIImagePNGRepresentation(UIImage(named: addPlaceImage.text!)!)!)
-        newPlaces.iPlaceDetail = addPlaceDetail.text
-        newPlaces.iPlaceChecked = false
+            newPlaces.iPlaceName = addPlaceName.text
+            newPlaces.iPlaceImage = NSData(data: UIImagePNGRepresentation(UIImage(named: addPlaceImage.text!)!)!)
+            newPlaces.iPlaceDetail = addPlaceDetail.text
+            newPlaces.iPlaceChecked = false
         
-        do {
-            try managedObjectContext.save()
-        } catch {
-            print(error)
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print(error)
+            }
+        
+            self.dismiss(animated: true, completion: nil)
         }
-        
-        self.dismiss(animated: true, completion: nil)
-
     }
-    
     
     
     //var newPlaces : ((PlaceObject) -> ())!
