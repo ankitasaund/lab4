@@ -184,7 +184,7 @@
         <scene sceneID="GMg-P8-23D">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NAM-ep-9SB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Places" id="k8R-la-4Xb"/>
+                    <tabBarItem key="tabBarItem" title="Places" image="List Filled-50" selectedImage="List Filled-50" id="k8R-la-4Xb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NmS-OX-Uct">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -203,7 +203,7 @@
         <scene sceneID="mmp-qN-aJ0">
             <objects>
                 <navigationController id="fvs-x9-2xD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" id="1jQ-YB-6UO"/>
+                    <tabBarItem key="tabBarItem" title="About" image="About Us Male-64" selectedImage="About Us Male-64" id="1jQ-YB-6UO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jt7-Wu-cXn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -276,6 +276,8 @@ I worked as a web developer few years back but after I came to USA and had lot's
         </scene>
     </scenes>
     <resources>
+        <image name="About Us Male-64" width="32" height="32"/>
+        <image name="List Filled-50" width="25" height="25"/>
         <image name="mypic" width="256" height="256"/>
     </resources>
 </document>
