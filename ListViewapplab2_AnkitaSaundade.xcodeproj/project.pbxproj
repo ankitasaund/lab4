@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D291DFD1E6D0AF30027701B /* ListViewapplab2_AnkitaSaundade.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D291DFB1E6D0AF30027701B /* ListViewapplab2_AnkitaSaundade.xcdatamodeld */; };
 		8D5757331E69442300387DE9 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5757321E69442300387DE9 /* AddViewController.swift */; };
 		8DE9399A1E6544C900DCF4EC /* PlaceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE939991E6544C900DCF4EC /* PlaceObject.swift */; };
 		8DF721191E4BBBD500C9B212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF721181E4BBBD500C9B212 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D291DFC1E6D0AF30027701B /* ListViewapplab2_AnkitaSaundade.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListViewapplab2_AnkitaSaundade.xcdatamodel; sourceTree = "<group>"; };
 		8D5757321E69442300387DE9 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		8DE939991E6544C900DCF4EC /* PlaceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceObject.swift; path = ListViewapplab2_AnkitaSaundade/PlaceObject.swift; sourceTree = "<group>"; };
 		8DF721151E4BBBD500C9B212 /* ListViewapplab2_AnkitaSaundade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListViewapplab2_AnkitaSaundade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				8DF721181E4BBBD500C9B212 /* AppDelegate.swift */,
+				6D291DFB1E6D0AF30027701B /* ListViewapplab2_AnkitaSaundade.xcdatamodeld */,
 				8DF7211C1E4BBBD500C9B212 /* Main.storyboard */,
 				8D5757321E69442300387DE9 /* AddViewController.swift */,
 				8DF721301E4BCE3E00C9B212 /* AboutViewController.swift */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D291DFD1E6D0AF30027701B /* ListViewapplab2_AnkitaSaundade.xcdatamodeld in Sources */,
 				8DE9399A1E6544C900DCF4EC /* PlaceObject.swift in Sources */,
 				8DF721191E4BBBD500C9B212 /* AppDelegate.swift in Sources */,
 				8D5757331E69442300387DE9 /* AddViewController.swift in Sources */,
@@ -320,6 +324,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6D291DFB1E6D0AF30027701B /* ListViewapplab2_AnkitaSaundade.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6D291DFC1E6D0AF30027701B /* ListViewapplab2_AnkitaSaundade.xcdatamodel */,
+			);
+			currentVersion = 6D291DFC1E6D0AF30027701B /* ListViewapplab2_AnkitaSaundade.xcdatamodel */;
+			path = ListViewapplab2_AnkitaSaundade.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8DF7210D1E4BBBD500C9B212 /* Project object */;
 }

@@ -7,20 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
 class PlaceDetailController: UIViewController {
 
     @IBOutlet var LablePlacename: UILabel!
     @IBOutlet var PlaceImage: UIImageView!
-     //@IBOutlet var LablePlaceDetail: UILabel!
-    
     @IBOutlet var Placedetail: UITextView!
     
    // var LablePlaceNametext : String!
   //  var PlaceImages : UIImage!
   //  var LablePlaceDetailtext: String!
     
-    var plcDetail: PlaceObject!
+    var plcDetail: PlaceObjectMO!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +30,7 @@ class PlaceDetailController: UIViewController {
         // self.Placedetail.text = self.PlaceDetailText
         self.LablePlacename.text = self.plcDetail.iPlaceName
         self.Placedetail.text = self.plcDetail.iPlaceDetail
-        self.PlaceImage.image = self.plcDetail.iPlaceImage
+        self.PlaceImage.image = UIImage(data:self.plcDetail.iPlaceImage as! Data)
         navigationItem.title = self.LablePlacename.text
         
         //add fly-in animation for Image
