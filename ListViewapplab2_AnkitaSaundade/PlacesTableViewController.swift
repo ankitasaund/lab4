@@ -17,12 +17,42 @@ class PlacesTableViewController: UITableViewController, UISearchResultsUpdating,
     
     let coreDataDB = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     var fetchResultsController : NSFetchedResultsController<PlaceObjectMO>!
+    
+    let collation = UILocalizedIndexedCollation.current()
+    var sections: [[AnyObject]] = []
+    var objects: [AnyObject] = [] {
+        didSet {
+            let selector: Selector = "iPlaceName"
+            sections = Array(repeating: [], count: collation.sectionTitles.count)
+            
+            let sortedObjects = collation.sortedArray(from: objects, collationStringSelector: selector)
+            for object in sortedObjects {
+                let sectionNumber = collation.section(for: object, collationStringSelector: selector)
+                sections[sectionNumber].append(object as AnyObject)
+            }
+            
+            self.tableView.reloadData()
+        }
+    }
+    
+    // MARK: UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+        return collation.sectionTitles[section]
+    }
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]?{
+        return collation.sectionIndexTitles
+    }
+    
+    override open func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return collation.section(forSectionIndexTitle: index)
+    }
 
     
-    
-    
-    
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
@@ -114,7 +144,7 @@ class PlacesTableViewController: UITableViewController, UISearchResultsUpdating,
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
